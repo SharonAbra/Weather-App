@@ -12,7 +12,7 @@ import {
 
 export const fetchKey = (text) => (dispatch) => {
   fetch(
-    `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=0hVnfbrMivhYoDi6kGEMt3wIPpfMEDBT&q=${text}`
+    `https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${process.env.REACT_APP_API_KEY}&q=${text}`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -25,7 +25,7 @@ export const fetchKey = (text) => (dispatch) => {
 
 export const fetchCurrent = (locationKey) => (dispatch) => {
   fetch(
-    `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=0hVnfbrMivhYoDi6kGEMt3wIPpfMEDBT`
+    `https://dataservice.accuweather.com/currentconditions/v1/${locationKey}?apikey=${process.env.REACT_APP_API_KEY}`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -38,7 +38,7 @@ export const fetchCurrent = (locationKey) => (dispatch) => {
 
 export const fetchCity = (locationKey) => (dispatch) => {
   fetch(
-    `https://dataservice.accuweather.com/locations/v1/${locationKey}?apikey=0hVnfbrMivhYoDi6kGEMt3wIPpfMEDBT`
+    `https://dataservice.accuweather.com/locations/v1/${locationKey}?apikey=${process.env.REACT_APP_API_KEY}`
   )
     .then((res) => res.json())
     .then((data) => {
@@ -51,7 +51,7 @@ export const fetchCity = (locationKey) => (dispatch) => {
 
 export const fetchForecast = (locationKey, metric) => (dispatch) => {
   fetch(
-    `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=0hVnfbrMivhYoDi6kGEMt3wIPpfMEDBT&metric=${metric}`
+    `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${locationKey}?apikey=${process.env.REACT_APP_API_KEY}&metric=${metric}`
   )
     .then((res) => res.json())
     .then((data) => {

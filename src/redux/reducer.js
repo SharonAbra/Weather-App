@@ -11,7 +11,7 @@ import {
 } from "./Constants";
 
 const initialState = {
-  locationKey: "215854",
+  locationKey: process.env.REACT_APP_DEFAULT_LOCATION_KEY,
   location: "",
   currentWeather: "",
   unit: "",

@@ -17,7 +17,7 @@ export default function FavoriteLocation({ id, favoriteKey }) {
 
   useEffect(() => {
     fetch(
-      `https://dataservice.accuweather.com/currentconditions/v1/${favoriteKey}?apikey=0hVnfbrMivhYoDi6kGEMt3wIPpfMEDBT`
+      `https://dataservice.accuweather.com/currentconditions/v1/${favoriteKey}?apikey=${process.env.REACT_APP_API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -33,7 +33,7 @@ export default function FavoriteLocation({ id, favoriteKey }) {
       });
 
     fetch(
-      `https://dataservice.accuweather.com/locations/v1/${favoriteKey}?apikey=0hVnfbrMivhYoDi6kGEMt3wIPpfMEDBT`
+      `https://dataservice.accuweather.com/locations/v1/${favoriteKey}?apikey=${process.env.REACT_APP_API_KEY}`
     )
       .then((res) => res.json())
       .then((data) => {
