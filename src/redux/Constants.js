@@ -1,0 +1,10 @@
+export const DEFAULT = "DEFAULT";
+export const CITY = "CITY";
+export const FORECAST = "FORECAST";
+export const KEY = "KEY";
+export const CURRENT = "CURRENT";
+export const VIEW_FAVORITE = "VIEW_FAVORITE";
+export const UNIT = "UNIT";
+export const UNIT_LETTER = "UNIT_LETTER";
+export const DARK_MODE = "DARK_MODE";
+export const VALID = "VALID";

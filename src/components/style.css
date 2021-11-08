@@ -1,0 +1,96 @@
+.light-mode {
+    background-color: rgb(125, 192, 246);
+    height: 100vh;
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+    height: 100vh;
+}
+
+@media screen and (max-width: 767px) {
+    .light-mode {
+        height: 100%;
+    }
+    .dark-mode {
+        height: 100%;
+    }
+}
+
+.input {
+    border:none;
+    border-radius: 7px;
+    padding: 10px;
+    margin: 30px 10px;
+    width: 250px;
+}
+
+.city-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.description {
+    font-size: 400%;
+}
+
+@media screen and (max-width: 480px) {
+    .description {
+        font-size: 150%;
+    }
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.forecast-container {
+    margin-top: 20px;
+}
+
+.box {
+    margin-top: 20px;
+    box-shadow: 0 0 40px rgb(0 0 0 / 40%);
+    font-weight: bold;
+    color: black;
+}
+
+.box-dark {
+    box-shadow: 0 0 40px #FFFFFF;
+    margin-top: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+@media screen and (max-width: 480px) {
+    .box {
+        margin: 10px 40px;
+    }
+    .box-dark {
+        margin: 10px 40px;
+    }
+}
+
+.favorites-title {
+    padding: 30px 10px;
+}
+
+.box, .box-dark {
+    align-self: flex-end;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+    transform-origin: bottom;
+    animation-name: bounce;
+    animation-timing-function: ease;
+}
+
+@keyframes bounce {
+    0%   { transform: scale(1,1)    translateY(0); }
+    10%  { transform: scale(1.1,.9) translateY(0); }
+    30%  { transform: scale(.9,1.1) translateY(-20px); }
+    50%  { transform: scale(1,1)    translateY(0); }
+    100% { transform: scale(1,1)    translateY(0); }
+}
+
